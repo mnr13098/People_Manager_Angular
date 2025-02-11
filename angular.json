@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "people-manager": {
+    "Student-Portal": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/people-manager",
+            "outputPath": "dist/student-portal",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,7 +27,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+	            "node_modules/font-awesome/css/font-awesome.min.css"
             ],
             "scripts": []
           },
@@ -41,8 +43,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"
@@ -59,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "people-manager:build:production"
+              "buildTarget": "Student-Portal:build:production"
             },
             "development": {
-              "buildTarget": "people-manager:build:development"
+              "buildTarget": "Student-Portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -92,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e0589685-4934-4225-8baf-40a3b1f05d1c"
   }
 }
